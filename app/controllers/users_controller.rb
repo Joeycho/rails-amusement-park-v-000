@@ -33,6 +33,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     ride = Ride.create(user_id: params[:id], attraction_id:params[:attraction_id])
     flash[:message]= ride.take_ride
+    binding.pry
     redirect_to user_path(@user)
   end
 
