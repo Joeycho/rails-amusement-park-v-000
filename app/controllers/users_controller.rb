@@ -28,8 +28,10 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
     ride = Ride.create(user_id: params[:id], attraction_id:params[:attraction_id])
     ride.take_ride
+    redirect_to user_path(@user)
   end
 
   private
