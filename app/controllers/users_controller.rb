@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    
     if session[:user_id] == nil
       redirect_to root_path
     elsif current_user.id == params[:id].to_i
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
       if @user == nil
         redirect_to root_path
       else
+        flash[:message] = "Normal process"
         render :show
       end
     else
