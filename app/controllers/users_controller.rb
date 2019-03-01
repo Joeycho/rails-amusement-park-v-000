@@ -28,7 +28,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
+    ride = Ride.create(user_id: params[:id], attraction_id:params[:attraction_id])
+    ride.take_ride
   end
 
   private
