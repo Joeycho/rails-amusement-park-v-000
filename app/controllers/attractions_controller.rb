@@ -15,6 +15,15 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find(params[:id])
   end
 
+  def update
+    @attraction = Attraction.find(params[:id])
+    if @attraction.update(attraction_params)
+      redirect_to @attraction
+    else
+      render :edit
+    end
+  end
+
   def create
     @attraction = Attraction.create(attraction_params)
     return redirect_to controller: 'attractions', action: 'new' unless @attraction.save
