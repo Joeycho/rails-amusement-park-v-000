@@ -1,12 +1,18 @@
-<%= form_for @user, controller: 'users', action: 'create' do |f| %>
+<%= form_for @attraction, controller: 'attractions', action: 'create' do |f| %>
   <%= f.text_field :name %>
-  <%= f.number_field :height %>
-  <%= f.number_field :happiness %>
-  <%= f.number_field :nausea %>
   <%= f.number_field :tickets %>
+  <%= f.number_field :nausea_rating %>
+  <%= f.number_field :happiness_rating %>
+  <%= f.number_field :min_height %>
   <label for="user_admin">Check box if you are one of admins</label>
   <input name="user[admin]" type="hidden" value="0">
   <input class="form-check-input" type="checkbox" value="1" name="user[admin]" id="user_admin">
   <%= f.text_field :password %>
   <%= f.submit 'Create User' %>
 <% end %>
+
+:name
+t.integer :tickets
+t.integer :nausea_rating
+t.integer :happiness_rating
+t.integer :min_height
