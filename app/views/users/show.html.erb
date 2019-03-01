@@ -2,6 +2,16 @@
   <%= flash[:message] %>
 <% end %>
 
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <h1>Hi there, <%= @user.name %></h1>
 <p>Your Mood: <%= @user.mood %></p>
 <p>Your Tickets: <%= @user.tickets %></p>
