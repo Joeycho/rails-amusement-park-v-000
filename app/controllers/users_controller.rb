@@ -1,5 +1,4 @@
 require 'pry'
-require 'rack-flash'
 class UsersController < ApplicationController
   def new
     @user = User.new(id: nil)
