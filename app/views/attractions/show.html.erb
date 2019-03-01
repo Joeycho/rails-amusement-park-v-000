@@ -1,0 +1,8 @@
+<h2><%=@attraction.name%></h2>
+
+<li><%=@attraction.tickets%></li>
+<li><%=@attraction.nausea_rating%></li>
+<li><%=@attraction.happiness_rating%></li>
+<li><%=@attraction.min_height%></li>
+
+<%= button_to "Go on this ride", user_path(current_user)%>
