@@ -14,7 +14,6 @@ class UsersController < ApplicationController
       if @user == nil
         redirect_to root_path
       else
-        flash[:message] = "Normal process"
         render :show
       end
     else
