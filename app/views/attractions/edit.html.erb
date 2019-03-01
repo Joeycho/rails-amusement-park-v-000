@@ -1,13 +1,13 @@
 <h1>Editing <%= @attraction.name %> by <%= current_user.name%></h1>
 
 
-<%= form_for @attraction, controller: 'attractions', action: 'create' do |f| %>
+<%= form_for @attraction, controller: 'attractions', action: 'patch' do |f| %>
   <%= f.text_field :name %>
   <%= f.number_field :tickets %>
   <%= f.number_field :nausea_rating %>
   <%= f.number_field :happiness_rating %>
   <%= f.number_field :min_height %>
-  <%= f.submit 'Create Attraction' %>
+  <%= f.submit 'Edit Attraction' %>
 <% end %>
 
 <%= link_to 'Cancel Editing', @attraction %>
