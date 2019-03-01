@@ -8,6 +8,6 @@ class AttractionsController < ApplicationController
   end
 
   def new
-    
+
   end
 end
