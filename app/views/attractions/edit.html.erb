@@ -1,3 +1,6 @@
+<h1>Editing <%= @attraction.name %> by <%= current_user.name%></h1>
+
+
 <%= form_for @attraction, controller: 'attractions', action: 'create' do |f| %>
   <%= f.text_field :name %>
   <%= f.number_field :tickets %>
