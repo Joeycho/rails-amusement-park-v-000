@@ -2,3 +2,7 @@
 <ul><%@attractions.each do |ation|%>
   <li><%=link_to "Go on #{ation.name}", attraction_path(ation)%></li>
 <%end%></ul>
+
+<%if current_user.admin == true%>
+<p><%= link_to "New Attraction", new_attraction_path %></p>
+<%end%>
