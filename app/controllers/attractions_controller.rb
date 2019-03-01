@@ -11,6 +11,10 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new
   end
 
+  def edit
+
+  end
+
   def create
     @attraction = Attraction.create(attraction_params)
     return redirect_to controller: 'attractions', action: 'new' unless @attraction.save
