@@ -5,7 +5,7 @@
 <li><%=@attraction.happiness_rating%></li>
 <li><%=@attraction.min_height%></li>
 
-<%= form_for :user, url: user_path(current_user), method: :post do |f| %>
+<%= form_for :user, url: user_path(current_user), method: :patch do |f| %>
   <input type="hidden" name="attraction_id" value=<%=@attraction.id%>>
   <%= f.submit "Go on this ride" %>
 <% end %>
