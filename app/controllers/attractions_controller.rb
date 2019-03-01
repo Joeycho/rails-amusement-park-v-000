@@ -17,4 +17,11 @@ class AttractionsController < ApplicationController
     return redirect_to controller: 'attractions', action: 'new' unless @attraction.save
     redirect_to attraction_path(@attraction)
   end
+
+  private
+
+  def attraction_params
+    params.require(:attraction).permit(:name,:tickets,:happiness_rating,:nausea_rating,:min_height)
+  end
+
 end
