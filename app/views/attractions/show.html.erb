@@ -6,3 +6,7 @@
 <li><%=@attraction.min_height%></li>
 
 <%= button_to "Go on this ride", user_path(current_user),method: "patch"%>
+<%= form_for :user, url: user_path(current_user), method: :post do |f| %>
+  <input type="hidden" name="attraction_id" value=<%=@attraction.id%>>
+  <%= f.submit "Go on this ride" %>
+<% end %>
