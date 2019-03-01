@@ -1,4 +1,6 @@
+require 'rack-flash'
 class Ride < ActiveRecord::Base
+  use Rack::Flash
   belongs_to :attraction
   belongs_to :user
 
