@@ -27,6 +27,10 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def update
+    binding.pry
+  end
+
   private
 
   def user_params
