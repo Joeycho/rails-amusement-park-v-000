@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    binding.pry
   end
 
   private
