@@ -14,7 +14,6 @@ class AttractionsController < ApplicationController
   def create
     @attraction = Attraction.create(attraction_params)
     return redirect_to controller: 'attractions', action: 'new' unless @attraction.save
-    binding.pry
     redirect_to attraction_path(@attraction)
   end
 
