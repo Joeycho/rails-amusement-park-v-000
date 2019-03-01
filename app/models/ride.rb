@@ -17,7 +17,7 @@ class Ride < ActiveRecord::Base
         self.user.nausea+=self.attraction.nausea_rating
         self.user.happiness+=self.attraction.happiness_rating
         self.user.save
-        flash[:message] = "Thanks for riding the #{self.user.name}!"
+        errors.add(:message, "Thanks for riding the #{self.user.name}!")
       end
     end
 end
